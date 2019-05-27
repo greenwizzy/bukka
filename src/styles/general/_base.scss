@@ -1,29 +1,55 @@
-body {
-	font-family: "Arial", sans-serif;
-	font-size: 16px;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  padding: 0;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, ul {
-	padding: 0;
-	margin: 0;
+body {
+  font-family: "Roboto Slab", serif;
 }
 
 .container {
-	@include container();
-	@include sm(max-width, 510px);
-	@include md(max-width, 690px);
-	@include lg(max-width, 930px);
-	@include xl(max-width, 1110px);
+  @include container();
+  @include sm(max-width, 510px);
+  @include md(max-width, 690px);
+  @include lg(max-width, 930px);
+  @include xl(max-width, 1110px);
 }
 
 .img-responsive {
-	max-width: 500px;
-	width: 100%;
-	height: auto;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.page-main {
+  background-image: url("../../img/bg_main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    background-image: url("../../img/logo.png");
+    display: block;
+    width: 137px;
+    height: 28px;
+  }
+  &-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    &__item {
+      margin: 15px;
+    }
+  }
 }
