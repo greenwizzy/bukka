@@ -39,6 +39,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: $light-color;
+  padding-bottom: 162px;
 }
 
 .header {
@@ -102,6 +103,9 @@ body {
       margin-top: 22px;
     }
   }
+  &__name-top {
+    margin-top: 20px;
+  }
 
   &__descr {
     font-family: "Open Sans", serif;
@@ -124,6 +128,9 @@ body {
     letter-spacing: 0.72px;
     margin-bottom: 25px;
   }
+  &__sm {
+    font-style: italic;
+  }
 }
 
 .block-book {
@@ -138,4 +145,23 @@ body {
     background-image: url("../../img/book.png");
     flex-basis: 445px;
   }
+}
+
+.block-ava {
+  position: relative;
+  &__svg {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
+  &__img {
+    margin-top: 47px;
+    margin-right: 44px;
+  }
+}
+
+.block-author {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 160px;
 }
