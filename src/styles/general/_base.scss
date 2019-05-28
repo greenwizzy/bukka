@@ -11,6 +11,19 @@ $gradient: linear-gradient(
   margin: 0;
   padding: 0;
 }
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -81,7 +94,7 @@ body {
       color: $light-color;
     }
     &__item {
-      margin-left: 14px;
+      margin-left: 17px;
       padding-bottom: 5px;
       border-bottom: 3px solid transparent;
       transition: 0.3s;
@@ -223,6 +236,26 @@ body {
     margin-bottom: 29px;
     letter-spacing: 1.2px;
   }
+  &-social {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin-right: 24px;
+    }
+    &__list {
+      list-style-type: none;
+      color: $accent-color;
+      & > li {
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: middle;
+        & > a {
+          color: $accent-color;
+          font-size: 18px;
+        }
+      }
+    }
+  }
   &-text {
     flex-basis: 40%;
     h4 {
@@ -242,6 +275,15 @@ body {
   }
   &-table {
     flex-basis: 50%;
+    & > button {
+      padding: 17px 44px;
+      margin-top: 38px;
+      background-color: $accent-color;
+      border-radius: 3px;
+      color: $light-color;
+      font-family: "Roboto Slab";
+      box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+    }
     &__list {
       margin: 0;
       padding: 0;
