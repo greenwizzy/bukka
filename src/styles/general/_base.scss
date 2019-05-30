@@ -171,6 +171,35 @@ body {
     display: block;
     background-image: url("../../img/book.png");
     flex-basis: 445px;
+    position: relative;
+    &__title {
+      font-size: 36px;
+      letter-spacing: 1.44px;
+      font-weight: 700;
+      right: 86px;
+      top: 109px;
+      color: $light-color;
+      text-transform: uppercase;
+      position: absolute;
+      span {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        color: $accent-color;
+        display: block;
+        font-family: "Open Sans";
+        text-transform: none;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+    }
+    &__author {
+      font-family: "Open Sans";
+      letter-spacing: 0.7px;
+      font-size: 14px;
+      position: absolute;
+      bottom: 56px;
+      left: 86px;
+    }
   }
 }
 
@@ -218,14 +247,29 @@ body {
     text-align: center;
     padding-top: 156px;
     padding-bottom: 22px;
+    font-size: 48px;
   }
   &-subtitle {
     text-align: center;
     color: $accent-color;
     margin-bottom: 90px;
+    font-size: 18px;
   }
   &_grey {
     background-color: $bg-light-color;
+  }
+  &-button {
+    padding: 17px 44px;
+    background-color: $accent-color;
+    border-radius: 3px;
+    color: $light-color;
+    font-family: "Roboto Slab";
+    box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+    display: block;
+    margin: 0 auto;
+    /* Style for "Rectangle" */
+    width: 220px;
+    height: 48px;
   }
 }
 
@@ -278,6 +322,7 @@ body {
     & > button {
       padding: 17px 44px;
       margin-top: 38px;
+      margin-bottom: 256px;
       background-color: $accent-color;
       border-radius: 3px;
       color: $light-color;
@@ -305,10 +350,102 @@ body {
           font-size: 15px;
           line-height: 15px;
           top: 0px;
+          color: $light-color;
         }
         &::before {
           content: counter(list) ". ";
         }
+      }
+    }
+  }
+}
+
+.block-other-books {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    flex-basis: 32%;
+    &__title {
+      /* Style for "Fight Club" */
+      color: $bg-dark-color;
+      font-family: "Roboto Slab";
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 1.2px;
+      display: block;
+      text-align: center;
+      margin-top: 37px;
+    }
+    &__par {
+      display: block;
+      text-align: center;
+      /* Style for "Lorem ipsu" */
+      margin-top: 20px;
+
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      /* Text style for "Lorem ipsu" */
+      letter-spacing: 0.75px;
+    }
+    &__more {
+      text-decoration: none;
+      color: $accent-color;
+      text-align: center;
+      display: block;
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      margin-top: 14px;
+      margin-bottom: 90px;
+    }
+    &-demo {
+      background-repeat: no-repeat;
+      display: block;
+      background-image: url("../../img/book.png");
+      /* Style for "book" */
+      width: 269px;
+      height: 409px;
+      margin: 0 auto;
+      border-radius: 5px;
+      position: relative;
+      &__title {
+        font-size: 24px;
+        letter-spacing: 0.96px;
+        font-family: "Roboto Slab";
+        color: $light-color;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        span {
+          display: block;
+          text-transform: initial;
+          color: $accent-color;
+          font-family: "Open Sans";
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0.6px;
+          margin-top: 10px;
+        }
+      }
+      &__author {
+        font-size: 12px;
+        font-family: "Open Sans";
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.6px;
+        color: $accent-color;
+        position: absolute;
+        text-align: center;
+        bottom: 27px;
+        left: 79px;
       }
     }
   }
