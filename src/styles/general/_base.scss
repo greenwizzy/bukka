@@ -2,6 +2,7 @@ $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
+$dark-text: #9191b5;
 $gradient: linear-gradient(
   to left,
   rgba(101, 228, 206, 0.7) 0%,
@@ -10,6 +11,7 @@ $gradient: linear-gradient(
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 button {
@@ -23,6 +25,7 @@ button {
 
 a {
   text-decoration: none;
+  color: white;
 }
 h1,
 h2,
@@ -60,9 +63,12 @@ body {
 .wrap {
   max-width: 1170px;
   margin: 0 auto;
+  &--bottom {
+    padding-bottom: 161px;
+  }
 }
 .page-main {
-  background-image: linear-gradient(-60deg, #54b7a1 0%, #426384 100%);
+  background: linear-gradient(-60deg, #54b7a1 0%, #426384 100%);
   background-repeat: no-repeat;
   background-size: cover;
   color: $light-color;
@@ -110,6 +116,47 @@ body {
 
 .block-text {
   flex-basis: calc(100% - 495px);
+  &--margin_left {
+    margin-left: 110px;
+  }
+  &-item {
+    margin-bottom: 64px;
+    &__date {
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      /* Text style for "November 2" */
+      letter-spacing: 0.75px;
+      margin-bottom: 13px;
+    }
+    &__title {
+      font-family: "Roboto Slab";
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      margin-bottom: 23px;
+    }
+    &__descr {
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+    }
+    &__btn {
+      display: block;
+      background: $gradient;
+      max-width: 136px;
+      text-decoration: none;
+      color: $light-color;
+      text-align: center;
+      border-radius: 3px;
+      padding: 15px 0;
+      margin-top: 18px;
+      letter-spacing: 0.72px;
+      box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+    }
+  }
   &__name {
     font-family: "Open Sans", serif;
     font-size: 18px;
@@ -121,6 +168,9 @@ body {
     font-weight: 700;
     letter-spacing: 1.92px;
     margin-bottom: 45px;
+    &--margin {
+      margin-bottom: 27px;
+    }
     span {
       display: block;
       color: $accent-color;
@@ -144,7 +194,7 @@ body {
   }
   &__btn {
     display: block;
-    background-color: $accent-color;
+    background: $gradient;
     max-width: 250px;
     text-decoration: none;
     color: $light-color;
@@ -153,6 +203,7 @@ body {
     padding: 15px 0;
     margin-top: 53px;
     letter-spacing: 0.72px;
+    box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
     margin-bottom: 25px;
   }
   &__sm {
@@ -209,10 +260,18 @@ body {
     position: absolute;
     z-index: -1;
     right: 0;
+    &--left {
+      right: inherit;
+      left: 0;
+    }
   }
   &__img {
     margin-top: 47px;
     margin-right: 44px;
+    &--left {
+      margin-left: 51px;
+      margin-right: 0;
+    }
   }
 }
 
@@ -260,16 +319,13 @@ body {
   }
   &-button {
     padding: 17px 44px;
-    background-color: $accent-color;
+    background: $gradient;
     border-radius: 3px;
     color: $light-color;
     font-family: "Roboto Slab";
     box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
     display: block;
     margin: 0 auto;
-    /* Style for "Rectangle" */
-    width: 220px;
-    height: 48px;
   }
 }
 
@@ -323,7 +379,7 @@ body {
       padding: 17px 44px;
       margin-top: 38px;
       margin-bottom: 256px;
-      background-color: $accent-color;
+      background: $gradient;
       border-radius: 3px;
       color: $light-color;
       font-family: "Roboto Slab";
@@ -345,7 +401,7 @@ body {
           content: "+";
           left: 0;
           position: absolute;
-          background-image: $gradient;
+          background: $gradient;
           padding: 4px 7px;
           font-size: 15px;
           line-height: 15px;
@@ -446,6 +502,191 @@ body {
         text-align: center;
         bottom: 27px;
         left: 79px;
+      }
+    }
+  }
+}
+
+.block-news {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  overflow: hidden;
+  & + .page_btn {
+    padding: 17px 0px;
+    background: $gradient;
+    border-radius: 3px;
+    color: $light-color;
+    font-family: "Roboto Slab";
+    box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+    margin: 84px auto 0;
+    display: block;
+    max-width: 265px;
+    text-align: center;
+  }
+  &-btn {
+    &__btn {
+      padding: 17px 0px;
+      background: $gradient;
+      border-radius: 3px;
+      color: $light-color;
+      font-family: "Roboto Slab";
+      box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+      margin: 84px auto 0;
+      display: block;
+      max-width: 265px;
+      text-align: center;
+    }
+  }
+  &-item {
+    flex-basis: 33%;
+    &-img {
+      margin-bottom: 21px;
+      img {
+        width: 369px;
+        height: 224px;
+      }
+    }
+    &__title {
+      font-family: "Roboto Slab";
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+    }
+    &__date {
+      /* Style for "By Emma An" */
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 44px;
+      letter-spacing: 0.75px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      span {
+        color: $accent-color;
+      }
+    }
+    &__descr {
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+    }
+  }
+}
+
+.block-nlet {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 160px;
+  &-join {
+    flex-basis: 49%;
+    &__title {
+      font-family: "Roboto Slab";
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 1.92px;
+    }
+    &__descr {
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.75px;
+      margin-top: 23px;
+    }
+  }
+  &-subscribe {
+    flex-basis: 49%;
+    &__btn {
+      padding: 17px 44px;
+      margin-top: 20px;
+      margin-bottom: 256px;
+      width: 100%;
+      background: $gradient;
+      border-radius: 3px;
+      color: $light-color;
+      font-family: "Roboto Slab";
+      box-shadow: 0 2px 0 rgba(101, 228, 125, 0.5);
+      letter-spacing: 0.72px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__input {
+      display: block;
+      width: 100%;
+      padding: 15px 15px;
+      color: $dark-text;
+      background-color: $bg-dark-color;
+      border: none;
+      border-radius: 3px;
+      margin-top: 8px;
+      &::focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $dark-text;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.75px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-dark-color;
+  padding: 80px 0;
+}
+
+.block-footer {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    flex-basis: 29%;
+    &::nth-child(1) {
+      flex-basis: 32%;
+    }
+    &__title {
+      color: $accent-color;
+      font-family: "Roboto Slab";
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      /* Text style for "Useful Lin" */
+      letter-spacing: 0.72px;
+      margin-bottom: 30px;
+    }
+    &__descr {
+      color: $dark-text;
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      margin-top: 28px;
+    }
+    &__list {
+      color: $dark-text;
+      font-family: "Open Sans";
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      list-style-type: none;
+      & > li {
+        padding: 5px 0;
+      }
+    }
+    &__icons {
+      list-style-type: none;
+      display: flex;
+      margin-top: 18px;
+      & > li {
+        margin-right: 13px;
+        & > a {
+          color: $accent-color;
+        }
       }
     }
   }
