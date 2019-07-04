@@ -691,3 +691,93 @@ body {
     }
   }
 }
+
+.block-carousel {
+  text-align: center;
+  margin-top: 224px;
+  &-ava {
+    position: relative;
+    display: block;
+    width: 152px;
+    height: 152px;
+    margin: 0 auto 23px;
+  }
+  &-bq {
+    background: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 48px;
+    height: 42px;
+    background-image: url(../../img/bq.png);
+  }
+  &__name {
+    color: $accent-color;
+    font-family: "Roboto Slab";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-top: 29px;
+    margin-bottom: 3px;
+  }
+  &__descr {
+    color: $dark-text;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    max-width: 760px;
+    margin: 0 auto 43px;
+  }
+  &__expert {
+    margin-top: 9px;
+    margin-bottom: 43px;
+  }
+  &-thumb {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 152px;
+    border-radius: 100px;
+    height: 152px;
+    img {
+      width: 152px;
+      height: 152px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  }
+}
+
+.mb-161 {
+  margin-bottom: 161px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  & > li {
+    margin: 0 5px;
+
+    & > button {
+      width: 8px;
+      text-indent: -9999px;
+      height: 8px;
+      border: none;
+      background-color: $accent-color;
+      border-radius: 100%;
+    }
+  }
+  & > li.slick-active {
+    & > button {
+      width: 37px;
+      border-radius: 4px;
+    }
+  }
+}
